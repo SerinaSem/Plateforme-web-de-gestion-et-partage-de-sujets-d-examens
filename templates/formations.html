@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Formations{% endblock %}
+
+{% block content %}
+    <h2>Liste des formations pour la liscence informatique</h2>
+    <ul>
+        {% for f in formations %}
+            <li><a href="{{ url_for('sujets_par_formation', formation_id=f.id) }}">{{ f.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

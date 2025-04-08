@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Examen 2019",
+    "description": "Sujet d'examen de proba",
+    "year": 2019,
+    "course": "proba",
+    "file_path": "stats_2019.pdf",
+    "formation_id": 1
+  },
+  {
+    "id": 2,
+    "title": "Partiel Programmation C",
+    "description": "Boucles, pointeurs, malloc...",
+    "year": 2024,
+    "course": "C",
+    "file_path": "prog_web_2024.pdf",
+    "formation_id": 2
+  },
+  {
+    "id": 4,
+    "title": "td4 proba",
+    "description": "sdfghb",
+    "year": 2025,
+    "course": "proba",
+    "file_path": "td4_var_continue_normale.pdf",
+    "formation_id": 5
+  }
+]

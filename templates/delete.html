@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Supprimer un sujet{% endblock %}
+
+{% block content %}
+<h2>Supprimer le sujet</h2>
+
+<p>Es-tu sûr(e) de vouloir supprimer : <strong>{{ title }}</strong> ?</p>
+
+<form method="post" action="{{ url_for('delete_subject_post', id=id) }}">
+    <button type="submit">Oui, supprimer</button>
+    <a href="{{ url_for('subject_detail', id=id) }}">Annuler</a>
+</form>
+{% endblock %}

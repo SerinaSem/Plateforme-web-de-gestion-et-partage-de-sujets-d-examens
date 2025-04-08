@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ subject.title }}{% endblock %}
+
+{% block content %}
+<h2>{{ subject.title }}</h2>
+
+<p><strong>Description :</strong> {{ subject.description }}</p>
+<p><strong>Année :</strong> {{ subject.year }}</p>
+<p><strong>Cours :</strong> {{ subject.course }}</p>
+<p><strong>Fichier :</strong> <a href="{{ url_for('uploaded_file', filename=subject.file_path) }}" target="_blank">Télécharger</a>
+
+<a href="{{ url_for('delete_form', id=subject.id) }}">🗑️ Supprimer ce sujet</a>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+<div class="hero">
+  <h1>Bienvenue sur la plateforme</h1>
+  <p>Accédez facilement à tous les sujets d'examen de la licence informatique selon le module que vous souhaiter.</p>
+</div>
+
+<div class="cards">
+  <div class="card">
+    <h3>📚 Formations</h3>
+    <p>Consultez toutes les formations disponibles avec leurs sujets associés.</p>
+    <a href="{{ url_for('formations_list') }}">Voir les formations →</a>
+  </div>
+  <div class="card">
+    <h3>➕ Ajouter un sujet</h3>
+    <p>Connectez-vous pour enrichir la plateforme avec un nouveau sujet d'examen.</p>
+    <a href="{{ url_for('new_subject_form') }}">Ajouter un sujet →</a>
+  </div>
+</div>
+{% endblock %}

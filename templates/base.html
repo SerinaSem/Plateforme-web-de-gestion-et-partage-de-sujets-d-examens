@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Sujets d'examen{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Sujets d'examen</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Accueil</a>
+            <a href="{{ url_for('formations_list') }}">Formations</a>
+            {% if 'user_id' in session %}
+                <a href="{{ url_for('new_subject_form') }}">Ajouter un sujet</a>
+                <a href="{{ url_for('logout') }}">Déconnexion</a>
+            {% else %}
+                <a href="{{ url_for('login_page') }}">Connexion</a>
+                <a href="{{ url_for('new_user_page') }}">Inscription</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; {{ 2025 }} Plateforme d'examens - Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
